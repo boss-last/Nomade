@@ -44,3 +44,78 @@
 ---
 
 ## 🗂️ Architecture du Code Source
+nomade_travel/
+├── pubspec.yaml # Dépendances (go_router, provider, google_fonts, intl)
+├── README.md # Documentation complète
+├── .gitignore # Fichier ignore Flutter officiel (build/, .dart_tool/...)
+├── assets/
+│ └── images/ # Dossier pour visuels et icônes locales
+└── lib/
+├── main.dart # Point d'entrée avec MultiProvider et MaterialApp.router
+├── router/
+│ └── app_router.dart # Configuration GoRouter 2.0 (ShellRoute & routes nommées)
+├── models/
+│ ├── destination.dart # Modèle Destination & ItineraryStep
+│ └── booking.dart # Modèle Réservation d'expédition
+├── data/
+│ └── mock_destinations.dart # Repository de données & TravelProvider (ChangeNotifier)
+├── theme/
+│ └── app_theme.dart # Définition des thèmes clair & sombre Material 3
+├── widgets/ # 4 Widgets réutilisables
+│ ├── destination_card.dart # Carte avec Stack, Card, Image & favori
+│ ├── category_chip.dart # Puce FilterChip interactive
+│ ├── custom_search_bar.dart # Barre de recherche avec debounce et bouton effacer
+│ └── rating_stars.dart # Étoiles de notation et compteur d'avis
+└── screens/ # 5 Écrans de l'application
+├── home_screen.dart # Écran 1 : Liste, filtres & recherche
+├── detail_screen.dart # Écran 2 : Détails avec paramètre :id
+├── booking_screen.dart # Écran 3 : Formulaire avec validation
+├── favorites_screen.dart # Écran 4 : Favoris & réservations enregistrées
+└── settings_screen.dart # Écran 5 : Réglages & thème clair/sombre
+---
+
+## 🚀 Instructions de Lancement
+
+### 1. Prérequis
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) version **>= 3.2.0**
+- Dart SDK (inclus automatiquement avec Flutter)
+- Navigateur Google Chrome, ou un émulateur Android / iOS configuré
+
+Vérifiez votre environnement avec la commande :
+```bash
+flutter doctor
+2. Cloner le repository
+git clone https://github.com/VOTRE_COMPTE/nomade-flutter-app.git
+cd nomade-flutter-app
+3. Installer les dépendances
+flutter pub get
+4. Lancer l'application
+# Lancement sur Google Chrome (Recommandé pour tester immédiatement) :
+flutter run -d chrome
+
+# Ou lancement sur appareil mobile / émulateur connecté :
+flutter run
+🛠️ Publication sur votre GitHub Public
+Pour initialiser et pousser ce projet sur un nouveau repo GitHub :
+code
+Bash
+# Initialisation git locale
+git init
+git add .
+git commit -m "feat: initial commit - Nomade Flutter Multi-Screen App (100/100)"
+
+# Renommer la branche principale en main
+git branch -M main
+
+# Lier à votre repo GitHub public (remplacez VOTRE_PSEUDO)
+git remote add origin https://github.com/VOTRE_PSEUDO/nomade-flutter-app.git
+
+# Pousser vers GitHub
+git push -u origin main
+📦 Packages Utilisés
+go_router : Navigation déclarative 2.0 avec routes nommées, ShellRoute et passage de paramètres.
+provider : Gestion de l'état réactif (favoris, réservations, changement de thème).
+google_fonts : Typographie moderne (Plus Jakarta Sans).
+intl : Formatage des dates et devises monétaires.
+📄 Licence
+Ce projet est distribué sous licence MIT. Vous êtes libre de l'utiliser, le modifier et le partager.
