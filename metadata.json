@@ -1,0 +1,6 @@
+{
+  "name": "Nomade — Flutter Multi-Screen Travel App & Studio",
+  "description": "Application Flutter multi-écrans complète avec navigation GoRouter, recherche/filtres, écran de détail avec paramètres, formulaire avec validation, thème clair/sombre et export de code source complet.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
